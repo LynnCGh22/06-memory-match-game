@@ -13,8 +13,6 @@ const emojis = ["🍕","🍕","🐶","🐶","🚀","🚀","🌈","🌈"];
 
 shuffle(emojis);
 
-let lockBoard = false;
-
 
 function flipCard() {
 
@@ -57,23 +55,6 @@ function disableCards() {
 
   resetTurn();
 
-}
-
-
-function checkMatch() {
-
-  const isMatch =
-    firstCard.dataset.emoji === secondCard.dataset.emoji;
-
-  if (isMatch) {
-
-    disableCards();
-
-  } else {
-
-    unflipCards();
-
-  }
 }
 
 
