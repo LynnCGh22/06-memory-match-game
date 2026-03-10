@@ -47,6 +47,13 @@ h1 {
   margin-bottom: 20px;
 }
 
+.message {
+  min-height: 24px;
+  margin: 0 0 14px;
+  font-weight: 700;
+  color: #1f7a4f;
+}
+
 /* CARD STYLE */
 
 .card {
