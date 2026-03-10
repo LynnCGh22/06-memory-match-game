@@ -15,6 +15,15 @@ const timerDisplay = document.querySelector("#timer");
 const messageDisplay = document.querySelector("#message");
 const restartButton = document.querySelector("#restart");
 
+function initializeGame() {
+  if (!board || !movesDisplay || !matchesDisplay || !timerDisplay || !messageDisplay || !restartButton) {
+    return;
+  }
+
+  restartButton.addEventListener("click", restartGame);
+  restartGame();
+}
+
 function formatTime(totalSeconds) {
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
@@ -169,5 +178,4 @@ function restartGame() {
   setupBoard();
 }
 
-restartButton.addEventListener("click", restartGame);
-restartGame();
+document.addEventListener("DOMContentLoaded", initializeGame);
