@@ -49,6 +49,17 @@ function unflipCards() {
 
 }
 
+function disableCards() {
+
+  
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+
+  resetTurn();
+
+}
+
+
 function checkMatch() {
 
   const isMatch =
@@ -64,17 +75,6 @@ function checkMatch() {
 
   }
 }
-
-function disableCards() {
-
-  let matches = 0;
-  firstCard.removeEventListener("click", flipCard);
-  secondCard.removeEventListener("click", flipCard);
-
-  resetTurn();
-
-}
-
 
 
 function resetTurn() {
